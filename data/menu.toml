@@ -1,53 +1,51 @@
 [[entries]]
 title = "info"
 
-  [[entries.entries]]
-  title = "a (nearly) no-CSS, fast, minimalist Hugo theme ported from <a href='https://github.com/riggraz/no-style-please'>riggraz/no-style-please</a>."
+[[entries]]
+title = "browse"
 
   [[entries.entries]]
-  title = "github repo"
-  url = "https://github.com/riggraz/no-style-please"
+  title = "all posts in chronological order"
+  url = "posts"
 
   [[entries.entries]]
-  title = "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+  title = "tags"
+  url = "tags"
+
+  [[entries.entries]]
+  title = "series"
+  url = "series"
+
+  [[entries.entries]]
+  title = "rss"
+  url = "index.xml"
 
 [[entries]]
-title = "all posts"
+title = "dream"
 
   [entries.post_list]
+  section = "dream"
   limit = 5
   show_more = true
-  show_more_text = "See archive..."
-  show_more_url = "posts"
+  show_more_text = "more..."
+  show_more_url = "dream"
 
 [[entries]]
-title = "posts by category"
+title = "learn"
 
   [entries.post_list]
-  section = "posts"
+  section = "learn"
+  limit = 5
   show_more = true
-  show_more_text = "See more posts..."
-  show_more_url = "posts"
+  show_more_text = "more..."
+  show_more_url = "learn"
 
 [[entries]]
-title = "rss"
-url = "index.xml"
+title = "apply"
 
-[[entries]]
-title = "another list"
-
-  [[entries.entries]]
-  title = "with subitems"
-
-    [[entries.entries.entries]]
-    title = "with subsubitems"
-
-    [[entries.entries.entries]]
-    title = "example page"
-    url = "about"
-
-[[entries]]
-title = "PRO TIP"
-entries = [
-   { title = "to edit this menu, edit data/menu.toml file" }
-  ]
+  [entries.post_list]
+  section = "apply"
+  limit = 5
+  show_more = true
+  show_more_text = "more..."
+  show_more_url = "apply"
