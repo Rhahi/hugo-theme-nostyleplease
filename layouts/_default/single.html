@@ -3,8 +3,8 @@
 
 {{/*  https://www.joesacher.com/blog/2017/08/03/implementing-series-in-hugo/  */}}
 {{ if .Params.series }}
-    {{ $.Scratch.Add "cur_page_num" 1 }}
-    {{ $.Scratch.Add "total_page_num" 0 }}
+    {{ $.Scratch.Set "cur_page_num" 1 }}
+    {{ $.Scratch.Set "total_page_num" 0 }}
     {{ range where .Site.RegularPages.ByDate "Params.series" .Params.series }}
         {{ $.Scratch.Add "total_page_num" 1 }}
         {{ if gt $.Date.Unix .Date.Unix }}
