@@ -4,6 +4,32 @@
 <h1>Series: {{ .Title | title }}</h1>
 
 {{ .Content }}
-{{ partial "post_list_by_date.html" (dict "context" .)}}
+
+{{- $posts := .Data.Pages -}}
+
+{{- $limit_exceeded:= "" -}}
+{{- if (and .Params.limit (gt (len $posts) .Params.limit)) -}}
+    {{- $limit_exceeded = true -}}
+{{- else -}}
+    {{- $limit_exceeded = false -}}
+{{ end }}
+
+{{- if (gt (len $posts) 0) }}
+    {{- if .Params.limit }}
+        {{ $posts = (first .Params.limit $posts ) }}
+    {{ end }}
+    <ul>
+        {{ range $post := $posts.ByDate }}
+        <li>
+            <span>{{- ($post.Date | time.Format .Site.Params.theme_config.date_format) }}</span>
+            <a href="{{ $post.Permalink | relURL }}">{{$post.Section | title }}: {{ $post.Title }}</a>
+        </li>
+        {{ end }}
+        {{- if and .Params.show_more $limit_exceeded }}
+            <li><a href="{{ .Params.show_more_url | relURL }}">{{ .Params.show_more_text | default "Show more..." }}</a></li>
+        {{ end }}
+    </ul>
+{{ end }}
+
 
 {{ end }}
