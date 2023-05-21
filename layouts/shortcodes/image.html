@@ -1,14 +1,21 @@
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" }}
-{{ $h := .Get "h" }}
-{{ $v := .Get "v" }}
+{{ $maxh := .Get "maxh" }}
+{{ $maxw := .Get "maxw" }}
+{{ $minh := .Get "minh" }}
+{{ $minw := .Get "minw" }}
 {{ $class := .Get "class" }}
 
-<a href="{{ $src }}" target="_blank">
+<a href="{{ $src }}" target="_blank" class="shortcode-image {{ if $class }}{{$class}}{{ end }}">
     <img
         src="{{ $src }}"
         alt="{{ $alt }}"
-        style="{{ if $h }} max-height: {{$h}}; {{ end }} {{ if $v }} max-width: {{$v}}; {{ end }}"
-        {{ if $class }}class="{{$class}}"{{ end }}
+        class="shortcode-image"
+        style="
+            {{ if $maxh }} max-height: {{$maxh}}; {{ end }}
+            {{ if $maxw }} max-width: {{$maxw}}; {{ end }}
+            {{ if $minh }} min-height: {{$minh}}; {{ end }}
+            {{ if $minw }} min-width: {{$minw}}; {{ end }}
+        "
     />
 </a>
