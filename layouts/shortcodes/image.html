@@ -1,0 +1,14 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $h := .Get "h" }}
+{{ $v := .Get "v" }}
+{{ $class := .Get "class" }}
+
+<a href="{{ $src }}" target="_blank">
+    <img
+        src="{{ $src }}"
+        alt="{{ $alt }}"
+        style="{{ if $h }} max-height: {{$h}}; {{ end }} {{ if $v }} max-width: {{$v}}; {{ end }}"
+        {{ if $class }}class="{{$class}}"{{ end }}
+    />
+</a>
