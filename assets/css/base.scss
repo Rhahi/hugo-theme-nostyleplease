@@ -116,7 +116,8 @@ pre {
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid $white-1;
+  border: thin solid $dark-3;
+  background-color: $dark-1;
   border-collapse: collapse;
   padding: 0.4rem;
 }
