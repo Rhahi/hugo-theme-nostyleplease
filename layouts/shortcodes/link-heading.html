@@ -1,4 +1,4 @@
 {{ $id := .Get 0 | lower | replaceRE "[^0-9a-z]" "-" | replaceRE "-+" "-" -}}
-<a href="#{{ $id }}">
+<a href="#{{ $id }}" class="link-heading">
     <h2 id="{{ $id }}">{{ .Get 0 }}</h2>
 </a>
