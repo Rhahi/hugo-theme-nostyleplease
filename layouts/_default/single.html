@@ -51,8 +51,8 @@
             {{ range where .Site.RegularPages.ByDate "Params.series" .Params.series }}
             <li>
                 {{ .Date | time.Format "2006-01-02" }}
-                <a href="{{ .Permalink }}">{{ .Section | title }}: {{ .Title }}</a>
-                {{ if eq .Permalink $.Permalink }}&lt;-- You are here{{ end }}
+                <a href="{{ .RelPermalink }}">{{ .Section | title }}: {{ .Title }}</a>
+                {{ if eq .RelPermalink $.RelPermalink }}&lt;-- You are here{{ end }}
             </li>
             {{ end }}
         </ul>
