@@ -182,3 +182,8 @@ article > header {
       margin-left: auto;
   }
 }
+
+// modifiers
+.smaller { font-size: 0.85em; }
+.darker { color: $dark-3; }
+.right { float: right; }
