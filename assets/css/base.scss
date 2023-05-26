@@ -52,13 +52,15 @@ li { margin: 0.4rem 0; }
 
 // links
 
-a[href] {
+a[href], .help-link {
   color: $orange-3;
+  text-decoration: underline;
   text-decoration-color: $orange-3;
 }
 
-a[href]:visited {
+a[href]:visited, .help-visited {
   color: $green-2;
+  text-decoration: underline;
   text-decoration-color: $green-2;
 }
 
@@ -188,3 +190,5 @@ article > header {
 .smaller { font-size: 0.85em; }
 .darker { color: $dark-3; }
 .right { float: right; }
+.white { color: $white-1; }
+.center { text-align: center;}

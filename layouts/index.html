@@ -7,9 +7,17 @@
     {{- end -}}
 </header>
 
-[help]: new link, visited link,
-
 {{ .Content }}
 {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+
+<hr>
+
+<p class="center">
+    <span class="help">[link help]:</span>
+    <span class="help-link">fresh</span>,
+    <span class="help-visited">visited</span>,
+    <span class="help-link">external🔗</span>,
+    <span class="help-visited">..</span>(back to home)
+</p>
 
 {{ end }}
