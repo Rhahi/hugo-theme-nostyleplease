@@ -18,7 +18,6 @@
   {{ $sass := resources.Get "css/main.scss" }}
   {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
-  <link rel=icon type="image/png" sizes="32x32" href="/favicon32.png">
-  <link rel=icon type="image/png" sizes="192x192" href="/favicon192.png">
+  {{ partial "favicon.html" }}
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 </head>
