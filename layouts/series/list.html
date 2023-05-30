@@ -9,7 +9,7 @@
 <ul>
     <li>
         <a href="{{ .Page.RelPermalink }}">{{.Page.Title | title}}</a>({{.Count}})
-        <span class="smaller darker right">
+        <span class="smaller dark-3 right">
             {{ range first 1 .Pages.ByDate }} {{ .Date.Format "2006-01-02" }} {{ end }}
             -> {{ range last 1 .Pages.ByDate }} {{ .Date.Format "2006-01-02" }} {{ end }}
         </span>

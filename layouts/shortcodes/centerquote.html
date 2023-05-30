@@ -1,5 +1,0 @@
-{{ $text := .Get "text" }}
-{{ $class := .Get "class" }}
-<p class="center {{ if $class }}{{ $class }}{{ else }}white-2{{ end }}">
-    <em>“{{ if $text }}{{ $text }}{{ else }}{{ .Get 0 }}{{ end }}”</em>
-</p>

@@ -1,0 +1,7 @@
+{{ $text := .Get "text" }}
+{{ $who := .Get "who" }}
+{{ $class := .Get "class" }}
+<p class="{{ if $class }}{{ $class }}{{ else }}white-2{{ end }}">
+    <em>“{{ if $text }}{{ $text }}{{ else }}{{ .Get 0 }}{{ end }}”</em>
+    <em>{{ if $who }}— {{ $who }}{{ end }}</em>
+</p>
