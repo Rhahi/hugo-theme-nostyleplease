@@ -22,7 +22,7 @@ html, body { background: $black; }
 html { height: 100%; }
 
 body {
-  color: $white-2;
+  color: $white-3;
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.4;
@@ -200,4 +200,6 @@ article > header {
 .darker { color: $dark-3; }
 .right { float: right; }
 .white { color: $white-1; }
-.center { text-align: center;}
+.white-2 { color: $white-2; }
+.white-3 { color: $white-3; }
+.center { text-align: center; }
