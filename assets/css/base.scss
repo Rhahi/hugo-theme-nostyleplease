@@ -113,7 +113,7 @@ a[href^="http://"]::after {
 hr {
   text-align: center;
   border: 0;
-
+  clear: both;
   &:before { content: '/////' }
   &:after { content: attr(data-content) '/////' }
 }
