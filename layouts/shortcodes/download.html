@@ -1,6 +1,4 @@
 {{ $name := .Get "name" }}
 {{ $src := .Get "src" }}
 
-<a href="{{ $src }}" download>
-    {{ if $name }}{{ $name }}{{ else }}Download{{ end }}
-</a>
+<a href="{{ $src }}" download>{{ if $name }}{{ $name }}{{ else }}Download{{ end }}</a>
