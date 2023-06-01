@@ -62,15 +62,15 @@ li { margin: 0.4rem 0; }
 // links
 
 a[href], .help-link {
-  color: $orange-3;
-  text-decoration: underline;
-  text-decoration-color: $orange-3;
-}
-
-a[href]:visited, .help-visited {
   color: $green-2;
   text-decoration: underline;
   text-decoration-color: $green-2;
+}
+
+a[href]:visited, .help-visited {
+  color: $orange-3;
+  text-decoration: underline;
+  text-decoration-color: $orange-3;
 }
 
 a[href]:focus {
