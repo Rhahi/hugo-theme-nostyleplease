@@ -1,6 +1,5 @@
-a.shortcode-image {
+.shortcode-image {
     border: solid grey 1px;
-
     display: inline-block;
     &.right-text {
         float: right;
@@ -11,16 +10,23 @@ a.shortcode-image {
         float: left;
         margin: 0.5em 0.5em 0.5em 0;
     }
+    p {
+        text-align: center;
+        margin: 0.1em;
+    }
+
+    p.text {
+        color: $dark-3;
+    }
 }
 
 img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
-  }
-
+}
 
 figcaption {
     text-align: center;
     opacity: 0.5;
-  }
+}
