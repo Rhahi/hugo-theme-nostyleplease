@@ -1,15 +1,21 @@
 .shortcode-image {
     border: solid grey 1px;
     display: inline-block;
-    &.right-text {
+    &.right {
         float: right;
         margin: 0.5em 0 0.5em 0.5em;
     }
 
-    &.left-text {
+    &.left {
         float: left;
-        margin: 0.5em 0.5em 0.5em 0;
+        margin: 0.5em 1.5em 0.5em 0;
     }
+
+    &.center {
+        margin: 0.5em auto;
+        display: block;
+    }
+
     p {
         text-align: center;
         margin: 0.1em;
