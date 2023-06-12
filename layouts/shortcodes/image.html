@@ -8,19 +8,18 @@
 {{ $minw := .Get "minw" }}
 {{ $class := .Get "class" }}
 
-<div class="shortcode-image {{ if $class }}{{$class}}{{ end }}" style="
-    {{ if $maxw }} max-width: {{$maxw}}; {{ end }}
-">
+<div class="shortcode-image {{ if $class }}{{$class}}{{ else }}center{{ end }}"
+    style="
+        {{ if $maxh }} max-height: {{$maxh}}; {{ end }}
+        {{ if $maxw }} max-width: {{$maxw}}; {{ end }}
+        {{ if $minh }} min-height: {{$minh}}; {{ end }}
+        {{ if $minw }} min-width: {{$minw}}; {{ end }}
+    "
+>
 <a href="{{ $src }}" target="_blank">
     <img
         src="{{ $src }}"
         alt="{{ $alt }}"
-        style="
-            {{ if $maxh }} max-height: {{$maxh}}; {{ end }}
-            {{ if $maxw }} max-width: {{$maxw}}; {{ end }}
-            {{ if $minh }} min-height: {{$minh}}; {{ end }}
-            {{ if $minw }} min-width: {{$minw}}; {{ end }}
-        "
     />
 </a>
 {{ if $title }}<p class="title">{{ $title }}</p>{{ end }}
