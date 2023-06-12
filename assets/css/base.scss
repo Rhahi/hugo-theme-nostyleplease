@@ -93,7 +93,7 @@ a.link-heading {
   }
 }
 
-a[href^="https://"]::after {
+a[href^="https://"]:not(.image)::after {
   content: "🔗";
   font-size: 1em;
   margin-left: 0.1em;
