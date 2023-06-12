@@ -21,7 +21,7 @@
         <p><i>
             Part {{ $.Scratch.Get "cur_page_num" }} of
             {{ $.Scratch.Get "total_page_num" }} in the
-            <a href="/series/{{.Params.series}}">{{ .Params.series | title }}</a> series.</p>
+            <a href="/series/{{.Params.series | urlize}}">{{ .Params.series | title }}</a> series.</p>
         </i><p>
         {{ end }}
 
@@ -46,7 +46,7 @@
     {{/*  series footer  */}}
     {{ if .Params.series }}
         <hr class="dark"/>
-        <i>Other posts from [<a href="/series/{{.Params.series}}">{{.Params.series | title}}</a>] series:</i>
+        <i>Other posts from [<a href="/series/{{.Params.series | urlize}}">{{.Params.series | title}}</a>] series:</i>
         <ul>
             {{ range where .Site.RegularPages.ByDate "Params.series" .Params.series }}
             <li>
