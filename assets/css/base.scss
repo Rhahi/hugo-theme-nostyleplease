@@ -138,6 +138,10 @@ table, th, td {
 }
 
 // common code
+em, strong {
+  color: $white-2;
+}
+
 pre {
   background-color: $dark-1;
   color: $white-1;
