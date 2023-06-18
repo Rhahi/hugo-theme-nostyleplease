@@ -203,11 +203,12 @@ code.has-jax {
 }
 
 blockquote {
-  font-style: italic;
   border-left: thick solid $dark-3;
-  padding: 1rem;
-  background-color: $dark-1;
+  border-right: thick solid $dark-3;
+  padding: 0.5rem 1rem;
+  background-color: $dark-0;
   p { margin: 0; }
+  margin: 0;
 }
 
 article > header {
