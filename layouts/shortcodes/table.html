@@ -1,0 +1,40 @@
+{{/*  params  */}}
+{{ $dir := .Get "dir" }}
+{{ $file := .Get "file" }}
+{{ $class := .Get "class" }}
+{{ $entry := .Get "entry" }}
+
+{{/*  directory  */}}
+{{ if $dir }}
+  {{ $.Scratch.Set "file" (index .Site.Data $dir $file)}}
+{{ else }}
+  {{ $.Scratch.Set "file" (index .Site.Data $file)}}
+{{ end}}
+{{ $dataFile := $.Scratch.Get "file" }}
+
+{{/*  table  */}}
+{{ $.Scratch.Set "count" 0 }}
+<div class="table {{ if $class }}{{ $class }}{{ else }}default{{ end }}">
+  <table>
+    {{/*  determine table entry  */}}
+    {{ if $entry }}
+      {{ $.Scratch.Set "data" (index $dataFile $entry) }}
+    {{ else }}
+      {{ $.Scratch.Set "data" index $dataFile }}
+    {{ end }}
+
+    {{/*  table rows  */}}
+    {{ range $row := $.Scratch.Get "data" }}
+      <tr>
+        {{ range $cell := $row }}
+          {{ if eq 0 ($.Scratch.Get "count") }}
+            <th>{{ . }}</th>
+          {{ else }}
+            <td>{{ . }}</td>
+          {{ end }}
+        {{ end }}
+      </tr>
+    {{ $.Scratch.Add "count" 1 }}
+    {{ end }}
+  </table>
+</div>

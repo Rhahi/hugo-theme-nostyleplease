@@ -128,6 +128,21 @@ pre {
   overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
 }
 
+.table {
+  &.full {
+    width: 100%;
+  }
+  &.default {
+    display: flex;
+  }
+  &.small > table {
+    width: unset;
+  }
+  td {
+    background-color: $dark-0;
+  }
+}
+
 table { width: 100%; }
 
 table, th, td {
